@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+
+
+$primary1 : #FC7613;
+$primary1-over : #FFA664;
+$primary2 : #C15709;
+$white : #fff;
+
+$background : #141519;
+$card-background : #1e252f;
+$rating-background : #252e37;
+$rating-background-over : #7B8698;
+$card-text : #68717a;
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+}
+
+body{
+  background-color: $background;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

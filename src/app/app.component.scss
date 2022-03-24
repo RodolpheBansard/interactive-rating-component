@@ -1,0 +1,135 @@
+$primary1 : #FC7613;
+$primary1-over : #FFA664;
+$primary1-disabled : #ffa884;
+$primary2 : #C15709;
+$white : #fff;
+
+$background : #141519;
+$card-background : #1e252f;
+$rating-background : #252e37;
+$rating-background-over : #7B8698;
+$card-text : #68717a;
+
+
+.rating-card{
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  max-width: 450px;
+  margin: 0 auto;
+  width: 90%;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  background-color: $card-background;
+
+  h1{
+    color: $white;
+  }
+  p{
+    color: $card-text;
+  }
+
+  .star-icon{
+    width: 3rem;
+
+    background-color: $rating-background;
+    padding: .75rem;
+    border-radius: 1.5rem;
+  }
+
+  .rating-container{
+    display: flex;
+    justify-content: space-around;
+    color: $card-text;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    div{
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      border-radius: 1.5rem;
+      width: 3rem;
+      height: 3rem;
+      background-color: $rating-background;
+    }
+    div:hover{
+      background-color: $rating-background-over;
+      color: $white;
+
+    }
+    div.active{
+      background-color: $primary1;
+      color: $white;
+    }
+    div.active:hover{
+       background-color: $primary1-over;
+    }
+  }
+
+  .submit-button{
+    cursor: pointer;
+    background-color: $primary1;
+    border: none;
+    color: $white;
+    width: 100%;
+    height: 3rem;
+    border-radius: 1.5rem;
+
+    font-size: 1rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+  }
+  .submit-button:hover{
+    background: $white;
+    color: $primary1;
+  }
+  .submit-button-disabled{
+    background-color: $primary1-disabled;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+}
+
+.success-message{
+  position: absolute;
+  padding: 1.5rem;
+  background-color: $card-background;
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5rem;
+  top: 0;
+  left: -100%;
+  transition: .5s;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+
+  img{
+    width: 10rem;
+  }
+  p,h1{
+    text-align: center;
+  }
+  p{
+    margin-top: 1rem;
+  }
+  .rating-selected{
+    color: $primary2;
+    background-color: $rating-background;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 1rem;
+  }
+}
+.success-message.active{
+  left: 0;
+}
+
